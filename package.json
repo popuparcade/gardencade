@@ -1,0 +1,42 @@
+{
+  "name": "gardencade",
+  "version": "1.0.0",
+  "description": "a garden arcade game",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && tape tests/*.js | tap-spec",
+    "start": "budo index.js:bundle.js -- -p yo-yoify -t [ sheetify/transform -u sheetify-cssnext ] -p [ css-extract -o bundle.css ]"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popuparcade/gardencade.git"
+  },
+  "author": "sethvincent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/popuparcade/gardencade/issues"
+  },
+  "homepage": "https://github.com/popuparcade/gardencade#readme",
+  "devDependencies": {
+    "budo": "^8.3.0",
+    "extract-css": "^1.0.3",
+    "insert-css": "^0.2.0",
+    "sheetify-cssnext": "^1.0.7",
+    "standard": "^7.1.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1",
+    "yo-yoify": "^2.0.1"
+  },
+  "dependencies": {
+    "basscss": "^8.0.1",
+    "bel": "^4.3.1",
+    "choo": "^2.1.6",
+    "css-extract": "^1.1.0",
+    "normalize.css": "^4.1.1",
+    "sheetify": "^5.0.1"
+  }
+}
