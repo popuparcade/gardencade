@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "standard",
     "test": "npm run lint && tape tests/*.js | tap-spec",
-    "start": "budo index.js:bundle.js -- -p yo-yoify -t [ sheetify/transform -u sheetify-cssnext ] -p [ css-extract -o bundle.css ]"
+    "start": "budo index.js:bundle.js -l -P -- -p yo-yoify -t [ sheetify/transform -u sheetify-cssnext ] -p [ css-extract -o bundle.css ]"
   },
   "repository": {
     "type": "git",

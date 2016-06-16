@@ -5,21 +5,20 @@ var app = choo()
 
 css('normalize.css')
 css('basscss')
+css('./styles.css', { global: true })
 
-app.model({
-  state: {
-    title: 'gardencade',
-  },
-  reducers: {}
-})
+var start = require('./pages/start')
+var game = require('./pages/game')
+var spy = require('./pages/spy')
 
-function main (params, state, send) {
-  return el`<hi class="h1">gardencade</hi>`
-}
+app.model(require('./models/app'))
+app.model(require('./models/game'))
 
 app.router(function (route) {
   return [
-    route('/', main),
+    route('/', start),
+    route('/game', game),
+    route('/spy', spy)
   ]
 })
 
