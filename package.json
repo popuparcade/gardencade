@@ -34,9 +34,9 @@
   "dependencies": {
     "basscss": "^8.0.1",
     "bel": "^4.3.1",
-    "choo": "^2.1.6",
+    "choo": "^2.2.1",
     "css-extract": "^1.1.0",
     "normalize.css": "^4.1.1",
-    "sheetify": "^5.0.1"
+    "sheetify": "^5.0.2"
   }
 }
