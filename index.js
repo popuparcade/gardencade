@@ -7,7 +7,6 @@ css('normalize.css')
 css('basscss')
 
 app.model({
-  namespace: 'app',
   state: {
     title: 'gardencade',
   },
