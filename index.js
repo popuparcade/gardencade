@@ -16,7 +16,7 @@ app.model(require('./models/game'))
 
 app.router(function (route) {
   return [
-    route('/', start),
+    route('/', game),
     route('/game', game),
     route('/spy', spy)
   ]

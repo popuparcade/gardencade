@@ -2,14 +2,16 @@
   "name": "gardencade",
   "version": "1.0.0",
   "description": "a garden arcade game",
-  "main": "index.js",
+  "main": "main.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "lint": "standard",
     "test": "npm run lint && tape tests/*.js | tap-spec",
-    "start": "budo index.js:bundle.js -l -P -- -p yo-yoify -t brfs -t [ sheetify/transform -u sheetify-cssnext ] -p [ css-extract -o bundle.css ]"
+    "bundle": "browserify index.js -t [ sheetify/transform -u sheetify-cssnext ] -p yo-yoify -t brfs -p [ css-extract -o bundle.css ] -o bundle.js",
+    "start:web": "budo index.js:bundle.js -l -P -- -p yo-yoify -t brfs -t [ sheetify/transform -u sheetify-cssnext ] -p [ css-extract -o bundle.css ]",
+    "start": "npm run bundle && electron ."
   },
   "repository": {
     "type": "git",
